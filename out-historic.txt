@@ -1,0 +1,475 @@
+[2022-06-17 04:06:55] VERBOSE[3053232][C-0000073a] pbx.c: Executing [2121274000@from-pstn:1] Goto("SIP/lumensip-00000737", "ivr,FluxoInicialURA,1") in new stack
+
+[2022-06-17 04:06:55] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr,FluxoInicialURA,1)
+
+[2022-06-17 04:06:55] VERBOSE[3053232][C-0000073a] pbx.c: Executing [FluxoInicialURA@ivr:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:06:56] VERBOSE[3053232][C-0000073a] res_rtp_asterisk.c: 0x7f06840c14f0 -- Strict RTP switching to RTP target address 189.125.123.247:41276 as source
+
+[2022-06-17 04:06:56] VERBOSE[3053232][C-0000073a] pbx.c: Executing [FluxoInicialURA@ivr:2] Set("SIP/lumensip-00000737", "tentativa=0") in new stack
+
+[2022-06-17 04:06:56] VERBOSE[3053232][C-0000073a] pbx.c: Executing [FluxoInicialURA@ivr:3] Read("SIP/lumensip-00000737", "FluxoInicialURA,ivr/Riocard/entrada/Menu1In.01&ivr/Riocard/entrada/Menu1In.02&ivr/Riocard/entrada/Menu1In.03,1,,,5") in new stack
+
+[2022-06-17 04:06:56] VERBOSE[3053232][C-0000073a] app_read.c: Accepting a maximum of 1 digits.
+
+[2022-06-17 04:06:56] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard/entrada/Menu1In.01.slin' (language 'en')
+
+[2022-06-17 04:07:00] VERBOSE[3053232][C-0000073a] res_rtp_asterisk.c: 0x7f06840c14f0 -- Strict RTP learning complete - Locking on source address 189.125.123.247:41276
+
+[2022-06-17 04:07:14] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard/entrada/Menu1In.02.slin' (language 'en')
+
+[2022-06-17 04:07:30] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard/entrada/Menu1In.03.slin' (language 'en')
+
+[2022-06-17 04:07:40] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:07:40] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:07:41] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 300 ms
+
+[2022-06-17 04:07:41] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] app_read.c: User entered '2'
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [FluxoInicialURA@ivr:4] GotoIf("SIP/lumensip-00000737", "0?ivr-riocard-gratuidade,IVR,1") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [FluxoInicialURA@ivr:5] GotoIf("SIP/lumensip-00000737", "1?ivr-riocard-valorado,IVR,1") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,IVR,1)
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:2] DumpChan("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] app_dumpchan.c: 
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:3] Set("SIP/lumensip-00000737", "URA=ura_VALORADO") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:4] Set("SIP/lumensip-00000737", "CHANNEL(language)=pt-BR") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:5] Set("SIP/lumensip-00000737", "type=RCardCRRValorado") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:6] Set("SIP/lumensip-00000737", "resolvido=Sim") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:7] Set("SIP/lumensip-00000737", "ncartao=0") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:8] Set("SIP/lumensip-00000737", "cpf=0") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:9] AGI("SIP/lumensip-00000737", "LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] res_agi.c: Launched AGI Script /var/lib/asterisk/agi-bin/LoadConfig.pl
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: isDevelopment: 0
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: defaultFolder: ivr/Riocard/
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] res_agi.c: <SIP/lumensip-00000737>AGI Script LoadConfig.pl completed, returning 0
+
+[2022-06-17 04:07:41] ERROR[3053232][C-0000073a] res_pjsip_header_funcs.c: This function requires a PJSIP channel.
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:10] Set("SIP/lumensip-00000737", "realCallerId=") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:11] ExecIf("SIP/lumensip-00000737", "0?Set(CALLERID(num)=)") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:12] GotoIf("SIP/lumensip-00000737", "0?sourceIdentified") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:13] ExecIf("SIP/lumensip-00000737", "0?Set(CALLERID(num)=)") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:14] ExecIf("SIP/lumensip-00000737", "0?Set(CALLERID(num)=)") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:15] ExecIf("SIP/lumensip-00000737", "0?Set(CALLERID(name)=)") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:16] NoOp("SIP/lumensip-00000737", "-- From: ["" <21976221026>] --") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:17] NoOp("SIP/lumensip-00000737", "-- Call ID: [1655449615.4013] --") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:18] Wait("SIP/lumensip-00000737", "0.4") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:19] Set("SIP/lumensip-00000737", "URA=ura_VALORADO") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [IVR@ivr-riocard-valorado:20] Goto("SIP/lumensip-00000737", "ATENDIMENTO,1") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,ATENDIMENTO,1)
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:07:41] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:2] Wait("SIP/lumensip-00000737", "1") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:3] Set("SIP/lumensip-00000737", "menu=100") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:4] Set("SIP/lumensip-00000737", "CHANNEL(language)=br") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:5] NoOp("SIP/lumensip-00000737", "--- Caller: "" <21976221026>") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:6] NoOp("SIP/lumensip-00000737", "--- ID: 1655449615.4013") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:7] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO//CovidVal.01") in new stack
+
+[2022-06-17 04:07:42] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO//CovidVal.01.slin' (language 'br')
+
+[2022-06-17 04:08:26] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:8] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO//Oi") in new stack
+
+[2022-06-17 04:08:26] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO//Oi.slin' (language 'br')
+
+[2022-06-17 04:08:27] VERBOSE[3053232][C-0000073a] pbx.c: Executing [ATENDIMENTO@ivr-riocard-valorado:9] GotoIfTime("SIP/lumensip-00000737", "00:00-11:59,*,*,*?dia,1") in new stack
+
+[2022-06-17 04:08:27] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,dia,1)
+
+[2022-06-17 04:08:27] VERBOSE[3053232][C-0000073a] pbx.c: Executing [dia@ivr-riocard-valorado:1] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO//Bom_dia") in new stack
+
+[2022-06-17 04:08:27] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO//Bom_dia.slin' (language 'br')
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx.c: Executing [dia@ivr-riocard-valorado:2] Goto("SIP/lumensip-00000737", "URA,1") in new stack
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,URA,1)
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx.c: Executing [URA@ivr-riocard-valorado:1] AGI("SIP/lumensip-00000737", "LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json") in new stack
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] res_agi.c: Launched AGI Script /var/lib/asterisk/agi-bin/LoadConfig.pl
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: isDevelopment: 0
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: defaultFolder: ivr/Riocard/
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] res_agi.c: <SIP/lumensip-00000737>AGI Script LoadConfig.pl completed, returning 0
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx.c: Executing [URA@ivr-riocard-valorado:2] Set("SIP/lumensip-00000737", "URA=ura_VALORADO") in new stack
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx.c: Executing [URA@ivr-riocard-valorado:3] Set("SIP/lumensip-00000737", "CHANNEL(language)=pt-BR") in new stack
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] pbx.c: Executing [URA@ivr-riocard-valorado:4] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO//SaudacaoURARiocard") in new stack
+
+[2022-06-17 04:08:28] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO//SaudacaoURARiocard.slin' (language 'pt-BR')
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [URA@ivr-riocard-valorado:5] Goto("SIP/lumensip-00000737", "TriagemAtendimento,1") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,TriagemAtendimento,1)
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:2] Gosub("SIP/lumensip-00000737", "BolhaInformacional,BolhaInformacional,1") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [BolhaInformacional@BolhaInformacional:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [BolhaInformacional@BolhaInformacional:2] GotoIf("SIP/lumensip-00000737", "0?MSGINFO,1") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [BolhaInformacional@BolhaInformacional:3] Return("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:3] Set("SIP/lumensip-00000737", "FERIADO_RIOCARD=0") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:4] GotoIf("SIP/lumensip-00000737", "0?MenuPrincipalForaHorario") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:5] GotoIfTime("SIP/lumensip-00000737", "07:00-19:59,mon-fri,*,*?MenuPrincipalDentroHorario,1") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [TriagemAtendimento@ivr-riocard-valorado:6] GotoIfTime("SIP/lumensip-00000737", "07:00-13:00,sat-sun,*,*?MenuPrincipalDentroHorario,1:MenuPrincipalForaHorario,1") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,MenuPrincipalForaHorario,1)
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [MenuPrincipalForaHorario@ivr-riocard-valorado:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [MenuPrincipalForaHorario@ivr-riocard-valorado:2] Set("SIP/lumensip-00000737", "tentativa=0") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] pbx.c: Executing [MenuPrincipalForaHorario@ivr-riocard-valorado:3] Read("SIP/lumensip-00000737", "opcaom,ivr/Riocard//ura_VALORADO/MenuPrincipalForaHorario_01,1,,,5") in new stack
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] app_read.c: Accepting a maximum of 1 digits.
+
+[2022-06-17 04:08:30] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/MenuPrincipalForaHorario_01.slin' (language 'pt-BR')
+
+[2022-06-17 04:08:34] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:34] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:34] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:34] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] app_read.c: User entered '2'
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [MenuPrincipalForaHorario@ivr-riocard-valorado:4] GotoIf("SIP/lumensip-00000737", "1?Cancelamento,1") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (ivr-riocard-valorado,Cancelamento,1)
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:2] Set("SIP/lumensip-00000737", "tentativa=0") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:3] Set("SIP/lumensip-00000737", "defaultFolder=ivr/Riocard") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:4] Set("SIP/lumensip-00000737", "URA=ura_VALORADO") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:5] Set("SIP/lumensip-00000737", "uraMessage=Cancelamento") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:6] Set("SIP/lumensip-00000737", "uraKey=Cancelamento") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:7] Set("SIP/lumensip-00000737", "type=RCardCRRValorado") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:8] Set("SIP/lumensip-00000737", "audioCPF=CPFDigitado_02") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:9] Set("SIP/lumensip-00000737", "audioCPFinvalido=CPFDigitado_02") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [Cancelamento@ivr-riocard-valorado:10] Gosub("SIP/lumensip-00000737", "cpf,s,1") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:1] Answer("SIP/lumensip-00000737", "") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:2] Set("SIP/lumensip-00000737", "tentativa=0") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:3] AGI("SIP/lumensip-00000737", "LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json") in new stack
+
+[2022-06-17 04:08:34] VERBOSE[3053232][C-0000073a] res_agi.c: Launched AGI Script /var/lib/asterisk/agi-bin/LoadConfig.pl
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: defaultFolder: ivr/Riocard/
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] res_agi.c: LoadConfig.pl,/etc/asterisk/ivr/Riocard/settings.json: isDevelopment: 0
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] res_agi.c: <SIP/lumensip-00000737>AGI Script LoadConfig.pl completed, returning 0
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:4] Read("SIP/lumensip-00000737", "cpf,ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02,11,,,5") in new stack
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] app_read.c: Accepting a maximum of 11 digits.
+
+[2022-06-17 04:08:35] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02.slin' (language 'pt-BR')
+
+[2022-06-17 04:08:39] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:39] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:40] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:08:40] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:41] DTMF[3053232][C-0000073a] channel.c: DTMF begin '8' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:41] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:41] DTMF[3053232][C-0000073a] channel.c: DTMF end '8' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:41] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:42] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:43] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:43] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:43] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:43] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:44] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:44] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:44] DTMF[3053232][C-0000073a] channel.c: DTMF begin '8' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:44] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:45] DTMF[3053232][C-0000073a] channel.c: DTMF end '8' received on SIP/lumensip-00000737, duration 290 ms
+
+[2022-06-17 04:08:45] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:45] DTMF[3053232][C-0000073a] channel.c: DTMF begin '1' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:45] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '1' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:46] DTMF[3053232][C-0000073a] channel.c: DTMF end '1' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:08:46] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '1' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:46] DTMF[3053232][C-0000073a] channel.c: DTMF begin '0' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:46] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:47] DTMF[3053232][C-0000073a] channel.c: DTMF end '0' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:47] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:47] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:47] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:48] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:48] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:48] DTMF[3053232][C-0000073a] channel.c: DTMF begin '3' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:48] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '3' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF end '3' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '3' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF begin '0' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF end '0' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:08:49] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:08:49] VERBOSE[3053232][C-0000073a] app_read.c: User entered '78227810730'
+
+[2022-06-17 04:08:49] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:5] GotoIf("SIP/lumensip-00000737", "1?validon") in new stack
+
+[2022-06-17 04:08:49] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (cpf,s,10)
+
+[2022-06-17 04:08:49] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:10] AGI("SIP/lumensip-00000737", "ivr/Riocard/ChecarCliente.py") in new stack
+
+[2022-06-17 04:08:49] VERBOSE[3053232][C-0000073a] res_agi.c: Launched AGI Script /var/lib/asterisk/agi-bin/ivr/Riocard/ChecarCliente.py
+
+[2022-06-17 04:08:51] VERBOSE[3053232][C-0000073a] res_agi.c: <SIP/lumensip-00000737>AGI Script ivr/Riocard/ChecarCliente.py completed, returning 0
+
+[2022-06-17 04:08:51] WARNING[3053232][C-0000073a] ast_expr2.fl: ast_yyerror():  syntax error: syntax error, unexpected '!=', expecting $end; Input:
+
+[2022-06-17 04:08:51] WARNING[3053232][C-0000073a] ast_expr2.fl: If you have questions, please refer to https://wiki.asterisk.org/wiki/display/AST/Channel+Variables
+
+[2022-06-17 04:08:51] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:11] GotoIf("SIP/lumensip-00000737", "?valido") in new stack
+
+[2022-06-17 04:08:51] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:12] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO/ValidadorCPF_03") in new stack
+
+[2022-06-17 04:08:51] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/ValidadorCPF_03.slin' (language 'pt-BR')
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:13] Set("SIP/lumensip-00000737", "tentativa=1") in new stack
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:14] GotoIf("SIP/lumensip-00000737", "1?cpf") in new stack
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (cpf,s,4)
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:4] Read("SIP/lumensip-00000737", "cpf,ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02,11,,,5") in new stack
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] app_read.c: Accepting a maximum of 11 digits.
+
+[2022-06-17 04:08:53] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02.slin' (language 'pt-BR')
+
+[2022-06-17 04:08:59] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:08:59] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:00] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:09:00] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:00] DTMF[3053232][C-0000073a] channel.c: DTMF begin '8' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:00] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF end '8' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 290 ms
+
+[2022-06-17 04:09:01] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:02] DTMF[3053232][C-0000073a] channel.c: DTMF begin '2' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:02] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:02] DTMF[3053232][C-0000073a] channel.c: DTMF end '2' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:09:02] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '2' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF begin '8' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:03] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:04] DTMF[3053232][C-0000073a] channel.c: DTMF end '8' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:09:04] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '8' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:05] DTMF[3053232][C-0000073a] channel.c: DTMF begin '1' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:05] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '1' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:05] DTMF[3053232][C-0000073a] channel.c: DTMF end '1' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:09:05] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '1' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF begin '0' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF end '0' received on SIP/lumensip-00000737, duration 250 ms
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF begin '7' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:09] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF end '7' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '7' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF begin '3' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '3' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF end '3' received on SIP/lumensip-00000737, duration 260 ms
+
+[2022-06-17 04:09:10] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '3' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:11] DTMF[3053232][C-0000073a] channel.c: DTMF begin '0' received on SIP/lumensip-00000737
+
+[2022-06-17 04:09:11] DTMF[3053232][C-0000073a] channel.c: DTMF begin ignored '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:11] DTMF[3053232][C-0000073a] channel.c: DTMF end '0' received on SIP/lumensip-00000737, duration 280 ms
+
+[2022-06-17 04:09:11] DTMF[3053232][C-0000073a] channel.c: DTMF end passthrough '0' on SIP/lumensip-00000737
+
+[2022-06-17 04:09:11] VERBOSE[3053232][C-0000073a] app_read.c: User entered '78227810730'
+
+[2022-06-17 04:09:11] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:5] GotoIf("SIP/lumensip-00000737", "1?validon") in new stack
+
+[2022-06-17 04:09:11] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (cpf,s,10)
+
+[2022-06-17 04:09:11] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:10] AGI("SIP/lumensip-00000737", "ivr/Riocard/ChecarCliente.py") in new stack
+
+[2022-06-17 04:09:11] VERBOSE[3053232][C-0000073a] res_agi.c: Launched AGI Script /var/lib/asterisk/agi-bin/ivr/Riocard/ChecarCliente.py
+
+[2022-06-17 04:09:12] VERBOSE[3053232][C-0000073a] res_agi.c: <SIP/lumensip-00000737>AGI Script ivr/Riocard/ChecarCliente.py completed, returning 0
+
+[2022-06-17 04:09:12] WARNING[3053232][C-0000073a] ast_expr2.fl: ast_yyerror():  syntax error: syntax error, unexpected '!=', expecting $end; Input:
+
+[2022-06-17 04:09:12] WARNING[3053232][C-0000073a] ast_expr2.fl: If you have questions, please refer to https://wiki.asterisk.org/wiki/display/AST/Channel+Variables
+
+[2022-06-17 04:09:12] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:11] GotoIf("SIP/lumensip-00000737", "?valido") in new stack
+
+[2022-06-17 04:09:12] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:12] Playback("SIP/lumensip-00000737", "ivr/Riocard//ura_VALORADO/ValidadorCPF_03") in new stack
+
+[2022-06-17 04:09:12] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/ValidadorCPF_03.slin' (language 'pt-BR')
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:13] Set("SIP/lumensip-00000737", "tentativa=2") in new stack
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:14] GotoIf("SIP/lumensip-00000737", "1?cpf") in new stack
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] pbx_builtins.c: Goto (cpf,s,4)
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] pbx.c: Executing [s@cpf:4] Read("SIP/lumensip-00000737", "cpf,ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02,11,,,5") in new stack
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] app_read.c: Accepting a maximum of 11 digits.
+
+[2022-06-17 04:09:14] VERBOSE[3053232][C-0000073a] file.c: <SIP/lumensip-00000737> Playing 'ivr/Riocard//ura_VALORADO/ValidadorCPF_01CPFDigitado_02.slin' (language 'pt-BR')
+
+[2022-06-17 04:09:16] VERBOSE[3053232][C-0000073a] app_read.c: User disconnected
